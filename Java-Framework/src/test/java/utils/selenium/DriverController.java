@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import utils.drivers.ChromeWebDriver;
+import utils.drivers.EdgeWebDriver;
 import utils.drivers.FirefoxWebDriver;
 
 public class DriverController {
@@ -22,6 +23,11 @@ public class DriverController {
     public void startFirefox(String arg) {
         if(instance.webDriver != null) return;
         instance.webDriver = FirefoxWebDriver.loadFirefoxDriver(arg);
+    }
+
+    public void startEdge(String arg) {
+        if(instance.webDriver != null) return;
+        instance.webDriver = EdgeWebDriver.loadEdgeDriver(arg);
     }
 
     public void stopWebDriver() {

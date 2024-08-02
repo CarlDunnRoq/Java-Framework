@@ -1,4 +1,7 @@
 package steps;
 
-public class RedditSteps {
+import pages.Page;
+
+public class RedditSteps extends Page {
+    // this file is a placeholder to follow POM concepts.
 }
