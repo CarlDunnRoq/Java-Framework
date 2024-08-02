@@ -4,15 +4,15 @@ import static utils.selenium.Driver.browser;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import utils.selenium.Settings;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.Keys;
 
 import java.util.List;
 
 public class BasePage extends Page {
 
     public WebDriver driver = browser();
-    private String getTitle(){return driver.getTitle();}
-    private String getUrl(){return driver.getCurrentUrl();}
-    private String getPageSource(){return driver.getPageSource();}
 
     public void navigateToBaseUrl(){
         String baseUrl = Settings.baseUrl;
